@@ -1,2 +1,4 @@
-com\web\app\test\login\StepDefinition.class
 com\web\app\test\login\Runner.class
+com\web\app\test\login\HomePageDefinit.class
+com\web\app\test\login\StepDefinition.class
+com\web\app\test\login\ObjectRepository.class
