@@ -19,16 +19,16 @@ public class HomePageDefinit {
 	  new ObjectRepository(driver);
 	  
 	  	ObjectRepository.getUrl();
-	//  driver.navigate().to("https://login.dev.qa-experience.com");
 		driver.manage().window().maximize();
-	//	driver.navigate().refresh();
-		Thread.sleep(4000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Thread.sleep(4000);
   }
   
   public static void Loigin(WebDriver driver) throws Exception {
   
   	  new ObjectRepository(driver);
-  	  ObjectRepository.getElement("UserName",3000L).sendKeys("test@qa-experience.com");
+  	  ObjectRepository.getElement("UserName",4000L).sendKeys("test@qa-experience.com");
   	  ObjectRepository.getElement("Password",3000L).sendKeys("Password1");
   	  ObjectRepository.getElement("SignIn",2000L).click(); }
 	
