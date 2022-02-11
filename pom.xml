@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.web.app.test.login</groupId>
-  <artifactId>dlg_test_login</artifactId>
+  <groupId>com.scholastic.rco1</groupId>
+  <artifactId>scholastic_generic</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
   <properties>
@@ -13,7 +13,11 @@
 		<cucumber.version>6.10.4</cucumber.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<maven.surefire.version>2.22.2</maven.surefire.version>
-	</properties>
+		<rest.assused.version>4.4.0</rest.assused.version>
+		<assertions.version>3.21.0</assertions.version>
+	    <datasupplier.version>1.7.0</datasupplier.version>
+
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -66,7 +70,40 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-testng</artifactId>
 			<version>${cucumber.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-path</artifactId>
+			<version>${rest.assused.version}</version>
+			<scope>test</scope>
 		</dependency>		
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>xml-path</artifactId>
+			<version>${rest.assused.version}</version>
+			<scope>test</scope>
+		</dependency>		
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>${rest.assused.version}</version>
+			<scope>test</scope>
+		</dependency>	
+		
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${rest.assused.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.assertj</groupId>
+		    <artifactId>assertj-core</artifactId>
+		    <version>${assertions.version}</version>
+		    <scope>test</scope>
+		</dependency>		
+		
+			
 	</dependencies>
 	<build>
 		<plugins>
